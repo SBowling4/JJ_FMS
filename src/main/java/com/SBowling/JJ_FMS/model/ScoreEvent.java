@@ -1,6 +1,8 @@
 package com.SBowling.JJ_FMS.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+
 import java.time.Instant;
 
 @Entity
@@ -13,7 +15,7 @@ public class ScoreEvent {
   private Alliance alliance;
 
   @Enumerated(EnumType.STRING)
-  private EventType eventType;
+  @Getter public EventType eventType;
 
   private Instant timestamp;
 

@@ -19,6 +19,8 @@ public class Match {
   @OneToMany(cascade = CascadeType.ALL)
   private List<ScoreEvent> events = new ArrayList<>();
 
+  public Match() {}
+
   public Match(int b1, int b2, int r1, int r2) {
     this.blueAlliance1 = b1;
     this.blueAlliance2 = b2;

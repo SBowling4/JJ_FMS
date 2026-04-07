@@ -17,7 +17,7 @@ public class ScoreEvent {
   @Enumerated(EnumType.STRING)
   @Getter public EventType eventType;
 
-  private Instant timestamp;
+  @Getter private Instant timestamp;
 
   private int points;
 

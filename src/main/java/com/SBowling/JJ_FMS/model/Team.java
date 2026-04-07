@@ -7,7 +7,7 @@ import lombok.Getter;
 @Entity
 public class Team {
     
-    @Id
+    @Id 
     @Getter private int teamNumber;
 
     @Getter private String teamName;

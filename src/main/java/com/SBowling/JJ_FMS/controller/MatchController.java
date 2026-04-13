@@ -31,7 +31,7 @@ public class MatchController {
     }
 
     @PostMapping("{id}/score")
-    public Map<String, Integer> getScore(@PathVariable Long id) {
+    public Map<Alliance, Integer> getScore(@PathVariable Long id) {
         return service.getScore(id);
     }
     

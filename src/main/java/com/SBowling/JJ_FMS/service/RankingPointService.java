@@ -1,6 +1,5 @@
 package com.SBowling.JJ_FMS.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -28,8 +27,8 @@ public class RankingPointService {
     }
 
     public Map<Alliance, Integer> calculateWinRP(Long matchID) {
-        int blueScore = scoringService.getScore(matchID).get(Alliance.BLUE.toString());
-        int redScore = scoringService.getScore(matchID).get(Alliance.RED.toString());
+        int blueScore = scoringService.getScore(matchID).get(Alliance.BLUE);
+        int redScore = scoringService.getScore(matchID).get(Alliance.RED);
 
 
         if (blueScore > redScore) {

@@ -1,4 +1,4 @@
-package com.SBowling.JJ_FMS.component;
+package com.SBowling.JJ_FMS.init;
 
 import java.util.List;
 
@@ -9,11 +9,11 @@ import com.SBowling.JJ_FMS.model.Team;
 import com.SBowling.JJ_FMS.repository.TeamRepository;
 
 @Component
-public class TeamLodaer implements CommandLineRunner {
+public class TeamLoader implements CommandLineRunner {
 
     private final TeamRepository teamRepository;
 
-    public TeamLodaer(TeamRepository teamRepository) {
+    public TeamLoader(TeamRepository teamRepository) {
         this.teamRepository = teamRepository;
     }
 

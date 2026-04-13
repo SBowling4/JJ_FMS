@@ -46,7 +46,7 @@ public class StandingsService {
     }
 
     public List<Team> getStandings() {
-    return teamRepository.findAll().stream()
+        return teamRepository.findAll().stream()
             .sorted((t1, t2) -> {
                 double t1Avg = t1.getTotalMatches() == 0
                         ? 0
@@ -62,12 +62,15 @@ public class StandingsService {
                     return avgCompare;
                 }
 
-                // Tie-breaker: average score
-                return Double.compare(
-                        t2.getAverageScore(),
-                        t1.getAverageScore());
+                int avgScoreCompare = Double.compare(t2.getAverageScore(), t1.getAverageScore());
+
+                if (avgScoreCompare != 0) {
+                    return avgScoreCompare;
+                }
+
+                return Math.random() < 0.5 ? -1 : 1;
             })
             .toList();
-}
+    }
     
 }
